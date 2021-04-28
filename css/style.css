@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    background: #3faf82;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.bars {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 60px;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked ~ label .bars {
+    animation-name: content-alignment;
+    animation-duration: 2.3s;
+    
+}
+
+.bars div {
+    background-color: #ffffff;
+    width: 100px;
+    height: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes content-alignment {
+    0% {
+        justify-content: space-between;
+    }
+
+    50% {
+        justify-content: center;
+    }
+
+    100% {
+        justify-content: space-between;
+    }
+}
+
+@keyframes middle-bar {
+    0% {
+        width: 100px;
+        height: 10px;
+        margin: 0;
+        transform: rotate(0deg);
+    }
+
+    25% {
+        width: 0;
+        height: 0;
+        margin: -2.5px;
+    }
+
+    50% {
+        width: 0;
+        height: 0;
+        margin: -2.5px;
+        transform: rotate(0deg);
+    }
+
+    75% {
+        width: 0;
+        height: 0;
+        margin: -2.5px;
+    }
+
+    100% {
+        width: 100px;
+        height: 10px;
+        margin: 0;
+    }
+}
+
+input[type="checkbox"]:checked ~ label .bars div:nth-child(2) {
+    animation-name: middle-bar;
+    animation-duration: 2s;
+}
+
+@keyframes bar-one {
+    0% {
+        margin: 0;
+        transform: rotate(0deg);
+    }
+
+    25% {
+        margin: -2.5px;
+        transform: rotate(0deg);
+    }
+
+    50% {
+        margin: -2.5px;
+        transform: rotate(45deg);
+    }
+
+    75% {
+        margin: -2.5px;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        margin: 0;
+        transform: rotate(0deg);
+    }
+}
+
+input[type="checkbox"]:checked ~ label .bars div:nth-child(1) {
+    animation-name: bar-one;
+    animation-duration: 2s;
+}
+
+@keyframes bar-three {
+    0% {
+        margin: 0;
+        transform: rotate(0deg);
+    }
+
+    25% {
+        margin: -2.5px;
+        transform: rotate(0deg);
+    }
+
+    50% {
+        margin: -2.5px;
+        transform: rotate(135deg);
+    }
+
+    75% {
+        margin: -2.5px;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        margin: 0;
+        transform: rotate(0deg)
+    }
+}
+
+input[type="checkbox"]:checked ~ label .bars div:nth-child(3) {
+    animation-name: bar-three;
+    animation-duration: 2s;
+}
