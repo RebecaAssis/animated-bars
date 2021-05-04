@@ -7,6 +7,6 @@ O desafio 001 é um "Hamburguer button", com animação. A animação só inicia
 - e, para que elas inicializem apenas após o "click", utilizei um input, do tipo "checkbox", que está com "display: none".
 
 
-<div align="center">
+<div>
   <img src="images/animation.gif" width="400px" title="nintendo switch">
 </div>
