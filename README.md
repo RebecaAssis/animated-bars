@@ -10,3 +10,5 @@ O desafio 001 é um "Hamburguer button", com animação. A animação só inicia
 <div>
   <img src="images/animation.gif" width="400px" title="nintendo switch">
 </div>
+
+Para conferir e testar a aplicação, basta acessar o [link do GitHub Pages](https://rebecaassis.github.io/animated-bars/)
